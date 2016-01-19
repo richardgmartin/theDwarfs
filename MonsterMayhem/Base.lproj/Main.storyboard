@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qnm-cO-ziO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--A Bunch of Dwarves-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fDw-Gn-gwn">
+                                <rect key="frame" x="0.0" y="148" width="600" height="452"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellID" textLabel="LFq-Y5-xgn" detailTextLabel="OdF-9Y-jhV" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="MH0-gE-ymC">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MH0-gE-ymC" id="Ygo-Af-6os">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LFq-Y5-xgn">
+                                                    <rect key="frame" x="15" y="16" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OdF-9Y-jhV">
+                                                    <rect key="frame" x="15" y="36" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="llR-Xe-ZZ5" kind="show" identifier="showDwarfSegue" id="LzH-th-yMv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="faH-Bm-uuF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MIQ-Sv-IPa"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter dwarf name." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k4r-zn-Ivb">
+                                <rect key="frame" x="20" y="72" width="495" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XdE-kX-Cb0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter dwarf description." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kkg-cK-C93">
+                                <rect key="frame" x="20" y="110" width="495" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xyo-Ym-phQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amx-dD-DCx">
+                                <rect key="frame" x="542" y="72" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="8Kx-Gy-Vgy"/>
+                                    <constraint firstAttribute="height" constant="30" id="wtd-3Z-GId"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="onAddButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCr-qE-Uom"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fDw-Gn-gwn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="05o-Yq-oab"/>
+                            <constraint firstItem="kkg-cK-C93" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AC9-4g-IXY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fDw-Gn-gwn" secondAttribute="bottom" id="NWc-jN-HES"/>
+                            <constraint firstItem="Amx-dD-DCx" firstAttribute="leading" secondItem="k4r-zn-Ivb" secondAttribute="trailing" constant="27" id="Nd1-cu-jCg"/>
+                            <constraint firstItem="kkg-cK-C93" firstAttribute="top" secondItem="k4r-zn-Ivb" secondAttribute="bottom" constant="8" id="O6t-hf-8tF"/>
+                            <constraint firstItem="k4r-zn-Ivb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RQX-yD-fBx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Amx-dD-DCx" secondAttribute="trailing" constant="8" id="Sk4-jJ-3TT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fDw-Gn-gwn" secondAttribute="trailing" constant="-20" id="Wbk-xz-cGV"/>
+                            <constraint firstItem="fDw-Gn-gwn" firstAttribute="top" secondItem="kkg-cK-C93" secondAttribute="bottom" constant="8" id="a43-tQ-Hre"/>
+                            <constraint firstItem="k4r-zn-Ivb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="aMo-nA-BKt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kkg-cK-C93" secondAttribute="trailing" constant="65" id="dQu-v8-puD"/>
+                            <constraint firstItem="Amx-dD-DCx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nzs-sv-QfX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="A Bunch of Dwarves" id="RNg-VE-L7E"/>
+                    <connections>
+                        <outlet property="addButton" destination="Amx-dD-DCx" id="zsF-UC-TNR"/>
+                        <outlet property="descriptionTextfField" destination="kkg-cK-C93" id="ENW-6p-AUd"/>
+                        <outlet property="nameTextField" destination="k4r-zn-Ivb" id="Bi3-rk-n9L"/>
+                        <outlet property="tableView" destination="fDw-Gn-gwn" id="IRY-SK-7j9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="314"/>
+        </scene>
+        <!--Dwarf View Controller-->
+        <scene sceneID="piU-li-zih">
+            <objects>
+                <viewController id="llR-Xe-ZZ5" customClass="DwarfViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ye4-0l-pYb"/>
+                        <viewControllerLayoutGuide type="bottom" id="1I2-ie-GTf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EaW-Xh-qnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf9-yA-Ol9">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZm-ii-NxP">
+                                <rect key="frame" x="477" y="72" width="103" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="6Vk-NG-HVH"/>
+                                    <constraint firstAttribute="width" constant="103" id="TuK-4N-t90"/>
+                                </constraints>
+                                <state key="normal" title="Edit Dwarf"/>
+                                <connections>
+                                    <action selector="onEditButtonPressed:" destination="llR-Xe-ZZ5" eventType="touchUpInside" id="bMe-n5-deG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="edit dwarf name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LR-82-RZG">
+                                <rect key="frame" x="20" y="80" width="420" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tPK-2v-uwD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vf9-yA-Ol9" firstAttribute="centerX" secondItem="EaW-Xh-qnZ" secondAttribute="centerX" id="2tw-Ib-a6E"/>
+                            <constraint firstItem="JZm-ii-NxP" firstAttribute="top" secondItem="ye4-0l-pYb" secondAttribute="bottom" constant="8" id="7Q5-n1-bfi"/>
+                            <constraint firstItem="Vf9-yA-Ol9" firstAttribute="centerY" secondItem="EaW-Xh-qnZ" secondAttribute="centerY" id="BHq-8f-MKf"/>
+                            <constraint firstItem="9LR-82-RZG" firstAttribute="leading" secondItem="EaW-Xh-qnZ" secondAttribute="leadingMargin" id="Ky8-VM-bma"/>
+                            <constraint firstItem="JZm-ii-NxP" firstAttribute="trailing" secondItem="EaW-Xh-qnZ" secondAttribute="trailingMargin" id="VAQ-jv-jTI"/>
+                            <constraint firstItem="JZm-ii-NxP" firstAttribute="leading" secondItem="9LR-82-RZG" secondAttribute="trailing" constant="37" id="aZw-Tu-lhe"/>
+                            <constraint firstItem="9LR-82-RZG" firstAttribute="top" secondItem="ye4-0l-pYb" secondAttribute="bottom" constant="16" id="bAM-4G-ZsV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Vf9-yA-Ol9" id="rHF-Yr-MmD"/>
+                        <outlet property="editDwarfButton" destination="JZm-ii-NxP" id="iIw-Ul-X9u"/>
+                        <outlet property="editDwarfNameTextField" destination="9LR-82-RZG" id="4H9-Gc-ask"/>
+                        <segue destination="Pbs-s3-Moz" kind="unwind" identifier="goBack" unwindAction="goback:" id="hqd-MF-aJQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Two-gj-OXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Pbs-s3-Moz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="315"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eNr-RJ-c9e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qnm-cO-ziO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yyw-P9-it9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5gz-cp-mfz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzi-xt-XwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="-378"/>
+        </scene>
+    </scenes>
+</document>
