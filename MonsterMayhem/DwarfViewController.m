@@ -14,6 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *editDwarfNameTextField;
 
+@property (weak, nonatomic) IBOutlet UITextField *editDwarfDescriptionTextField;
+
+
 @end
 
 @implementation DwarfViewController
@@ -23,10 +26,15 @@
     
     [self.descriptionLabel sizeToFit];
     
+    self.title = self.dwarfItem.name;
     self.descriptionLabel.text = self.dwarfItem.monsterDescription;
-	self.title = self.dwarfItem.name;
+    
+    
+    self.dwarfImage.image = self.dwarfItem.image;
+    
     
     [self.editDwarfNameTextField setHidden:YES];
+    [self.editDwarfDescriptionTextField setHidden:YES];
     
 }
 
@@ -39,27 +47,24 @@
     
     if ([sender.titleLabel.text isEqualToString:@"Edit Dwarf"]) {
         [self.editDwarfNameTextField setHidden:NO];
+        [self.editDwarfDescriptionTextField setHidden:NO];
         [sender setTitle:@"Done Editing" forState:UIControlStateNormal];
         
     } else {
         [sender setTitle:@"Edit Dwarf" forState:UIControlStateNormal];
         self.dwarfItem.name = self.editDwarfNameTextField.text;
+        self.dwarfItem.monsterDescription = self.editDwarfDescriptionTextField.text;
+        self.descriptionLabel.text = self.dwarfItem.monsterDescription;
         self.title = self.dwarfItem.name;
-    
         
     }
   
-    
-    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     ViewController *svc = segue.destinationViewController;
     svc.partTimeDwarf = self.dwarfItem;
-    
-    
-    
     
 }
 

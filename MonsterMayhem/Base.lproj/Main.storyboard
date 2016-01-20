@@ -148,21 +148,43 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="edit dwarf description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WCm-dY-TCu">
+                                <rect key="frame" x="20" y="130" width="420" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hkK-VZ-3yK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SP4-rq-xnd">
+                                <rect key="frame" x="324" y="325" width="240" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="255" id="hTc-BZ-VM4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vf9-yA-Ol9" firstAttribute="centerX" secondItem="EaW-Xh-qnZ" secondAttribute="centerX" id="2tw-Ib-a6E"/>
                             <constraint firstItem="JZm-ii-NxP" firstAttribute="top" secondItem="ye4-0l-pYb" secondAttribute="bottom" constant="8" id="7Q5-n1-bfi"/>
                             <constraint firstItem="Vf9-yA-Ol9" firstAttribute="centerY" secondItem="EaW-Xh-qnZ" secondAttribute="centerY" id="BHq-8f-MKf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SP4-rq-xnd" secondAttribute="trailing" constant="16" id="Eye-Er-Kdh"/>
                             <constraint firstItem="9LR-82-RZG" firstAttribute="leading" secondItem="EaW-Xh-qnZ" secondAttribute="leadingMargin" id="Ky8-VM-bma"/>
+                            <constraint firstItem="SP4-rq-xnd" firstAttribute="leading" secondItem="EaW-Xh-qnZ" secondAttribute="leadingMargin" constant="304" id="Pc0-lI-eQS"/>
+                            <constraint firstItem="1I2-ie-GTf" firstAttribute="top" secondItem="SP4-rq-xnd" secondAttribute="bottom" constant="20" id="QyR-DQ-gbc"/>
                             <constraint firstItem="JZm-ii-NxP" firstAttribute="trailing" secondItem="EaW-Xh-qnZ" secondAttribute="trailingMargin" id="VAQ-jv-jTI"/>
+                            <constraint firstItem="WCm-dY-TCu" firstAttribute="top" secondItem="9LR-82-RZG" secondAttribute="bottom" constant="20" id="Zus-VT-rJL"/>
                             <constraint firstItem="JZm-ii-NxP" firstAttribute="leading" secondItem="9LR-82-RZG" secondAttribute="trailing" constant="37" id="aZw-Tu-lhe"/>
                             <constraint firstItem="9LR-82-RZG" firstAttribute="top" secondItem="ye4-0l-pYb" secondAttribute="bottom" constant="16" id="bAM-4G-ZsV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WCm-dY-TCu" secondAttribute="trailing" constant="140" id="esY-q5-yEA"/>
+                            <constraint firstItem="WCm-dY-TCu" firstAttribute="leading" secondItem="EaW-Xh-qnZ" secondAttribute="leadingMargin" id="tSK-vu-ekK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="Vf9-yA-Ol9" id="rHF-Yr-MmD"/>
+                        <outlet property="dwarfImage" destination="SP4-rq-xnd" id="H6S-ji-mve"/>
                         <outlet property="editDwarfButton" destination="JZm-ii-NxP" id="iIw-Ul-X9u"/>
+                        <outlet property="editDwarfDescriptionTextField" destination="WCm-dY-TCu" id="LJ8-ao-7qd"/>
                         <outlet property="editDwarfNameTextField" destination="9LR-82-RZG" id="4H9-Gc-ask"/>
                         <segue destination="Pbs-s3-Moz" kind="unwind" identifier="goBack" unwindAction="goback:" id="hqd-MF-aJQ"/>
                     </connections>
